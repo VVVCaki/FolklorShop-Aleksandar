@@ -1,0 +1,126 @@
+
+<div >
+  <img id="sale" src="assets/img/sale.gif">
+  <img id="sale2" src="assets/img/sale2.gif">
+</div>
+
+<div id="bigdiv" class="container py-3" >
+        <div class="carousel slide" data-ride="carousel" id="multi_item">
+          <div class="carousel-inner v-2" role="listbox">
+            <div class="carousel-item active" >
+              <div class="row">
+                <div class="col-12 col-md-4 item">
+                  <div class="card mb-2" style="width:290px; height:410px;">
+                    <img class="card-img-top" src="./assets/img/nosnja/nosnja1.jpg" alt="Sumadijski jelek">
+                    <div class="card-body">
+                      <h4 class="card-title">Sumadijski jelek</h4>
+                      <a 
+                          class="btn btn-warning" 
+                          [routerLink]="['/opis', 0]">
+                          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                          See details
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 item">
+                    <div class="card mb-2" style="width:290px; height:410px;">
+                        <img class="card-img-top" src="./assets/img/nosnja/nosnja2.jpg" alt="Libada">
+                        <div class="card-body">
+                          <h4 class="card-title">Libada</h4>
+                          <a 
+                              class="btn btn-warning" 
+                              [routerLink]="['/opis', 1]">
+                              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                              See details
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-4 item">
+                    <div class="card mb-2" style="width:290px; height:410px;">
+                        <img class="card-img-top" src="./assets/img/nosnja/rese1a.jpg" alt="Vlaske rese">
+                        <div class="card-body">
+                          <h4 class="card-title">Vlaske rese</h4>
+                          <a 
+                              class="btn btn-warning" 
+                              [routerLink]="['/opis', 2]">
+                              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                              See details
+                          </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-12 col-md-4 item">
+                    <div class="card mb-2" style="width:290px; height:410px;">
+                        <img class="card-img-top" src="./assets/img/nosnja/nosnja4.jpg" alt="Kosulja">
+                        <div class="card-body">
+                          <h4 class="card-title">Kosulja</h4>
+                          <a 
+                              class="btn btn-warning" 
+                              [routerLink]="['/opis', 3]">
+                              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                              See details
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-4 item">
+                    <div class="card mb-2" style="width:290px; height:410px;">
+                        <img class="card-img-top" src="./assets/img/nosnja/kobisnica1aa.jpg" alt="Oglavlje">
+                        <div class="card-body">
+                          <h4 class="card-title">Oglavlje</h4>
+                          <a 
+                              class="btn btn-warning" 
+                              [routerLink]="['/opis', 4]">
+                              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                              See details
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-4 item">
+                    <div class="card mb-2" style="width:290px; height:410px;">
+                        <img class="card-img-top" src="./assets/img/nosnja/kosovo1c.jpg" alt="Kosovski jelek">
+                        <div class="card-body">
+                          <h4 class="card-title">Kosovski jelek </h4>
+                          <a 
+                              class="btn btn-warning" 
+                              [routerLink]="['/opis', 5]">
+                              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                              See details
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Controls-->
+          <div class="divcar" >
+          <a class="carousel-control-prev" href="#multi_item" role="button" data-slide="prev">
+              <i class="fa fa-chevron-circle-left"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+        </div >
+        <div>
+            <a class="carousel-control-next" href="#multi_item" role="button" data-slide="next">
+                <i class="fa fa-chevron-circle-right"></i>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+          
+            <!--Indicators-->
+          <div id="car-indicators">
+              <ol class="carousel-indicators">
+                <li data-target="#multi_item" data-slide-to="0" class="active"></li>
+                <li data-target="#multi_item" data-slide-to="1"></li>
+              </ol>
+          </div>
+        </div>
+</div>
+      

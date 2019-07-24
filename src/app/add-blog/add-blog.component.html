@@ -1,0 +1,82 @@
+<h2 >Add new blog:</h2>
+
+<div style="padding-bottom: 20px;">
+    <a 
+        style=" margin-bottom:20px; color:#bd8200; font-family: cursive; font-weight: bold;"
+        class="add-to-cart btn btn-warning  " 
+        routerLink='/blog'>Back
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form (ngSubmit)="addNewBlog(f.value)" #f="ngForm">
+                <div class="form-group div1">
+                    <label for="title">Title</label>
+                    <input  type="text"
+                            class="form-control"
+                            id="title"
+                            ngModel
+                            required
+                            name="title"
+                            #title="ngModel">
+                    <div class="alert alert-danger col-md-12"
+                         *ngIf="!title.valid && title.touched">
+                          You must insert Title.
+                    </div>
+                </div>
+
+                <div class="form-group div1">
+                    <label for="description">Description</label>
+                    <input  type="text"
+                            class="form-control"
+                            id="description"
+                            ngModel
+                            required
+                            name="description"
+                            #description="ngModel">
+                    <div class="alert alert-danger col-md-12"
+                         *ngIf="!description.valid && description.touched">
+                          You must insert a description.
+                    </div>
+                </div>
+
+                <div class="form-group div1">
+                    <label for="date">Date</label>
+                    <input  type="text"
+                            class="form-control"
+                            id="date"
+                             ngModel
+                            required
+                            name="date"
+                            #date="ngModel">
+                    <div class="alert alert-danger col-md-12"
+                            *ngIf="!date.valid && date.touched">
+                            You must insert a date.
+                    </div>
+                </div>
+
+                <div class="form-group div1">
+                    <label for="url">Url</label>
+                    <input  type="text" 
+                            class="form-control" 
+                            id="url" 
+                            ngModel 
+                            name="url">
+                </div>
+
+                <button  type="submit"
+                         class="btn btn-danger float-right"
+                         style="color: black; font-weight: bold; font-family: cursive;"
+                         [disabled]="!f.valid">
+                         Add New Blog
+                </button>
+    
+            </form>
+        </div>
+    </div>
+</div>
+

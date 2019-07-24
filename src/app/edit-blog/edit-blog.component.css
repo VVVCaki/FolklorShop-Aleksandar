@@ -1,0 +1,54 @@
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    color: #bd8200;
+    text-align: center;
+}
+
+.add-to-cart {
+    color:#bd8200; 
+    font-family: cursive;
+    font-weight: bold; 
+    margin-right: 10px;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    background-color: #ffebbf;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: cursive;
+    color: #bd8200;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    
+}
+
+#div2 {
+ margin-left: 100px;
+ margin-right: 100px;
+
+}
+
+label {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-control {
+    font-family: cursive;
+    font-size: 12px;
+}
+.alert{
+    font-family: cursive;
+    background-color: rgb(230, 89, 89);
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}

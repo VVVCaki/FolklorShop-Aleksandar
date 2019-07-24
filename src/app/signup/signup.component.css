@@ -1,0 +1,44 @@
+#section{
+    background: url(/assets/img/naslovna.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+#section .bckg{
+    background-color: rgba(12, 12, 12, 0.712);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 150px;
+}
+.card-form{
+   opacity: 0.9;
+   background-color: rgb(134, 90, 7);
+   border-radius: 5%;
+}
+
+#email, #password {
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.btn {
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.display-4, h4 {
+    color: #bd8200;
+    font-family: cursive;
+    font-weight: bold;
+
+}
+
+.alert {
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+    font-family: cursive;
+}

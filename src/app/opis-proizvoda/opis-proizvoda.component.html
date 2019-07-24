@@ -1,0 +1,52 @@
+<h1>Product Details</h1>
+<div class="container">
+  <div class="row">
+    <div *ngIf="proizvod">
+      <div class="col-md-12">
+          <div class="card ">
+              <div id="grid1" >
+                    <div class="thumbnails group" >
+                        <a [href]="proizvod.url1" data-lightbox="gallery"><img [src]="proizvod.url1" alt="Image 1"></a>
+                        <a [href]="proizvod.url2" data-lightbox="gallery"><img [src]="proizvod.url2" alt="Image 2"></a>
+                        <a [href]="proizvod.url3" data-lightbox="gallery"><img [src]="proizvod.url3" alt="Image 3"></a>
+                        <a [href]="proizvod.url4" data-lightbox="gallery"><img [src]="proizvod.url4" alt="Image 4"></a>
+                    </div>
+              </div>
+              <div class="card-block ">
+                  <h4 class="card-title">{{proizvod.name}}</h4>
+                  <p 
+                      class="card-text col-md-3" 
+                      style=
+                          "font-size: 25px; 
+                          color: #c94000; 
+                          font-weight: bold; 
+                          border: 2px solid #c94000; 
+                          background-color: #f1a684;">
+                      <em>Price: €{{proizvod.price}}</em>
+                  </p>
+                  <p class="card-text" *ngIf="proizvod.description">Description: {{proizvod.description}}</p>
+                  <ng-template [ngIf]="autentifikacijaService.prijavljen()">
+                    <a class="add-to-cart btn btn-danger"
+                        style=
+                          "color: black; 
+                          font-weight: bold;
+                          margin-right: 20px;"
+                        routerLink="/korpa"
+                        (click)="staviUKorpu(proizvod)">
+                        <i class="fa fa-shopping-cart" style="font-size:16px; color: black; "></i>
+                        Buy Product
+                    </a>
+                  </ng-template>
+                  <a 
+                    class="add-to-cart btn btn-warning" 
+                    routerLink='/shopp'
+                    style="color:#bd8200; font-weight: bold;; margin-right: 10px;">
+                    <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+                    Back to Shop
+                </a>
+                </div>
+             
+    </div>
+    </div>
+  </div>
+</div>

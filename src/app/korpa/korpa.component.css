@@ -1,0 +1,31 @@
+h1 {
+    font-family: cursive;
+    color: #bd8200;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#tableDIV {
+    margin: 5%;
+    
+}
+
+thead {
+    font-family: cursive;
+    color: #bd8200;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+tbody {
+    font-family: cursive;
+    color: #bd8200;
+    text-align: center;
+    
+}

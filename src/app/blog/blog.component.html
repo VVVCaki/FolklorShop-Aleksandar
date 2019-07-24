@@ -1,0 +1,73 @@
+<h2>
+    <img src="assets/img/newpost.gif" 
+         style="height: 50px; width: 300px;">
+</h2>
+
+<div>
+    <ng-template [ngIf]="autentifikacijaService.prijavljen()">
+        <a 
+            style="margin-left:20px; margin-bottom:20px; color:black"
+            class="add-to-cart btn btn-danger" 
+            routerLink='/addblog'>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            Add New Blog
+        </a>
+    </ng-template>
+</div>
+
+<div *ngFor="let blog of bloglist; index as blogId">
+        <div class="col-md-11 row" 
+             id="cart"  >
+            <img class="cars-img-top" 
+                [src]="blog.url" >
+            <div class="col-md-7">
+                <div class="card-block ">
+                    <h5 class="card-title">{{blog.title}}</h5>
+                    <p>{{blog.description}}</p>
+                    <p id="datep">
+                        <em>{{blog.date}}</em>
+                    </p>
+                    <div id="editbtn">
+                        <ng-template [ngIf]="autentifikacijaService.prijavljen()">
+                            <a 
+                                class="add-to-cart btn btn-warning" 
+                                [routerLink]="['/blog', blogId]">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                Edit
+                            </a>
+                        </ng-template>
+                    </div>
+                    <p  id="bottomrow" 
+                        style="text-align: center;">
+
+                        <a href="https://www.facebook.com/">
+                            <i class="fa fa-facebook-square" aria-hidden="true" style="padding-right: 40px; color: #bd8200;"></i>
+                        </a>
+
+                        <a href="https://twitter.com/twitter?lang=en">
+                            <i class="fa fa-twitter-square" style="padding-right: 40px; color: #bd8200;" ></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/">
+                            <i class="fa fa-instagram" aria-hidden="true" style="padding-right: 40px; color: #bd8200;"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/">
+                            <i class="fa fa-youtube-play" style="padding-right: 40px; color: #bd8200;" ></i>
+                        </a>
+
+                        <a href="https://www.snapchat.com/">
+                            <i class="fa fa-snapchat" aria-hidden="true" style="padding-right: 40px; color: #bd8200;"></i>
+                        </a>
+                            <i class="fa fa-heart" aria-hidden="true" style="padding-right: 40px; color: #bd8200;"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+</div>         
+            
+                    
+                    
+
+
+

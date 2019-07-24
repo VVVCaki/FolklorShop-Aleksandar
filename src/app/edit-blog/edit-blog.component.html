@@ -1,0 +1,105 @@
+<h2>Edit blog</h2>
+
+<div >
+    <a 
+        style="margin-left:80px; margin-bottom:20px; "
+        class="add-to-cart btn btn-warning" 
+        routerLink='/blog'>
+        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+        Back to blogs
+    </a>
+</div>
+
+<div class="row col-md-10">
+    <div class="col-md-12" >
+        <form id="div2" #f="ngForm" (ngSubmit)="save(f.value)" *ngIf="blog">
+                <div class="form-group" >
+                        <label for="title">Title</label>
+                        <input 
+                        ngModel 
+                        required
+                        #title="ngModel"
+                        name="title" 
+                        id="title" 
+                        type="text" 
+                        class="form-control"
+                        [(ngModel)]="blog.title" >
+                        <div 
+                            class="alert alert-danger" 
+                            *ngIf="title.touched && title.invalid">
+                            Title is required.
+                        </div>
+                </div>
+
+                <div class="form-group" >
+                        <label for="description">Description</label>
+                        <textarea 
+                        ngModel 
+                        required
+                        #description="ngModel"
+                        name="description" 
+                        id="description" 
+                        type="text" 
+                        class="form-control"
+                        [(ngModel)]="blog.description" ></textarea>
+                        <div 
+                            class="alert alert-danger" 
+                            *ngIf="description.touched && description.invalid">
+                            Description is required.
+                        </div>
+                </div>
+
+                <div class="form-group" >
+                        <label for="Date">Date</label>
+                        <input
+                        ngModel 
+                        required
+                        #date="ngModel"
+                        name="date" 
+                        id="date" 
+                        type="text" 
+                        class="form-control"
+                        [(ngModel)]="blog.date" >
+                        <div 
+                            class="alert alert-danger" 
+                            *ngIf="date.touched && date.invalid">
+                            Date is required.
+                        </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="imageUrl">Image URL</label>
+                        <input 
+                        ngModel 
+                        required
+                        #imageUrl="ngModel"
+                        name="imageUrl" 
+                        id="imageUrl" 
+                        type="text" 
+                        class="form-control"
+                        [(ngModel)]="blog.url">
+                </div>
+
+                <div class="alert alert-danger" 
+                     *ngIf="imageUrl.touched && imageUrl.invalid">
+                     <div *ngIf="imageUrl.errors.required">
+                        Image URL is required.
+                    </div>         
+                </div>
+
+                <img [src]="blog.url" style="height: 200px; width: auto; margin-left: 80px; margin-right: 80px;">
+                <div style="margin: 20px; text-align: center;">
+                    <button  [disabled]="!f.valid" 
+                             class="btn btn-warning btn-block " 
+                             style="font-family: cursive; color:black; text-align: center;">
+                             Save
+                    </button>
+                </div>    
+        </form>
+    </div>
+</div>
+
+
+
+
+

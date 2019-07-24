@@ -1,0 +1,73 @@
+.carousel-item img {
+    height: 400px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+#carousel-example-1z {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #dbae7b;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5); 
+    border: 1px solid black;  
+    margin-right: 10px; 
+   
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #ffa600;
+}
+
+.divcar .carousel-control-prev,  .carousel-control-next  {
+    font-size: 60px;
+    border-radius: 10px;
+    color:#ffa600;
+    height: 400px;
+    width: 80px;
+    box-shadow: inset 1px 10px 10px 50px rgba(0,0,0,0.5);
+
+}
+
+h3, p{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: cursive;
+    font-weight: bold;
+    color: #bd8200;
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+
+}
+
+#car-indicators {
+    border: 2px solid #ffebbf;
+    
+}
+
+#news img{
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 50px;
+    width: 900px;
+    height: 80px;
+   
+}

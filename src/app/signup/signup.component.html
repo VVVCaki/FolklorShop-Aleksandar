@@ -1,0 +1,58 @@
+<header id="section">
+    <div class="bckg">
+      <div class="container content">
+        <div class="row">
+          <div class="col-md-6 d-none d-md-block text-info">
+            <h1 class="display-4"><strong>Login</strong></h1>
+            <h4>Login if you wont to see all content of page</h4>
+          </div>
+          <div class="col-md-6">
+            <div class="card  text-center card-form">
+              <div class="card-body">
+                <form (ngSubmit)="registrujSe(f)" #f="ngForm">
+                  <div class="form-group">
+                    <input 
+                    type="email" 
+                    placeholder="Email" 
+                    id="email" 
+                    name="email" 
+                    ngModel
+                    #emailRef="ngModel"
+                    required
+                    email
+                    class="form-control form-control-lg">
+                  </div>
+                  <div *ngIf="emailRef.errors && (emailRef.dirty ||emailRef.touched)" class="alert alert-danger col-md-12">
+                    <div [hidden]="!emailRef.errors.required">Please enter your email.</div>
+                    <div [hidden]="!emailRef.errors.email">Please enter valid email.</div>
+             </div>
+                  <div class="form-group">
+                    <label for="sifra"></label>
+                    <input 
+                    type="password" 
+                    placeholder="Password" 
+                    id="password" 
+                    name="sifra" 
+                    ngModel 
+                    #passwordRef="ngModel"
+                    required
+                    minlength="6"
+                    class="form-control form-control-lg">
+                  </div>
+                  <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" class="alert alert-danger col-md-12">
+                    <div [hidden]="!passwordRef.errors.required">Please enter a password.</div>
+                    <div [hidden]="!passwordRef.errors.minlength">Password must have at least 6 characters.</div>
+                </div>
+                  <button 
+                  class="btn btn-block btn-warning" 
+                  type="submit"
+                  [disabled]="!f.form.valid">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
